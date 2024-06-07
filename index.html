@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Inicio</li>
+            <li>Nosotras</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    <main>
+        <h1> ¡Haz tu pedido! </h1>
+        <form action="https://formsubmit.co/emma.gaxiol@email.com" method="POST">
+            <section class="form">
+            <div class="datos-basicos">
+                <legend>Datos Básicos</legend>
+                <br>
+                <label for="#nombre-input">Nombre</label>
+                <input name="nombre" type="text" required/>
+                <br>
+                <label for="#apellidos-input">Apellidos</label>
+                <input name="apellidos" type="text" required/>
+                <br>
+                <label for="#email-input">E-mail</label>
+                <input name="email" type="text" required/>
+                <br>
+                <label for="#phone-input">Celular<span class="required">*</span></label>
+                <input name="phone" type="tel" value="" aria-label="Please enter your phone number" placeholder="ej. (55)-5656-5656" onkeypress="return isNumberKey(event)"   pattern="[0-9]{10}" required/>
+            </div>
+            <br>
+            <div class="datos-pedido">
+                <legend>Datos del pedido</legend>
+                <br>
+                <label for="postre-input">Tipo de postre</label>
+                <br>
+                <select name="" id="" aria-placeholder="Selecciona">
+                    <option value="">Selecciona</option>
+                    <option value="">Galletas</option>
+                    <option value="">Brownies</option>
+                    <option value="">Pastel de chocolate</option>
+                    <option value="">Pay de limon</option>
+                    <option value="">Donas</option>
+                    <option value="">Flan</option>
+                    <option value="">Fresas con crema</option>
+                </select>
+                <br>
+                <label for="postre-cantidad">Cantidad</label>
+                <input name="cantidad" type="number" min="1" max="100" required/>
+            </div>
+            <div class="datos-envio">
+                    <legend>Datos de envío</legend>
+                    <br>
+                    <label for="#calle-input">Calle</label>
+                    <input name="calle" type="text" required/>
+                    <br>
+                    <label for="#colonia-input">Colonia</label>
+                    <input name="apellidos" type="text" required/>
+                    <br>
+                    <label for="#ciudad-input">Ciudad</label>
+                    <input name="email" type="text" required/>
+                    <br>
+                    <label for="#estado-input">Estado</label>
+                    <input name="email" type="text" required/>
+                    <br>
+                    <label for="#cp-input">Codigo Postal</label>
+                    <input name="email" type="text" required/>
+                    <br>
+                
+            </div>
+            </section>
+        </form>
+    </main>
+    
+</body>
+
+
+<script src="./assets/script.js"></script>
+</html>
