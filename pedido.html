@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body> 
+    <header>
+        <img src="./assets/logo.jpg" alt="Logotipo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="./inicio.html">Inicio</a></li>
+                <li><a href="./nosotras.html">Nosotras</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./pedido.html">Pedido</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <h1> ¡Haz tu pedido! </h1>
+        <br><br><br>
+        <form action="https://formsubmit.co/emma.gaxiol@email.com" method="POST" autocomplete="off">
+            <section class="form">
+                <div class="datos-basicos">
+                    <legend>Datos Básicos</legend>
+                    <br>
+                    <label for="#nombre-input">Nombre</label>
+                    <input name="nombre" type="text" required/>
+                    <br>
+                    <label for="#apellidos-input">Apellidos</label>
+                    <input name="apellidos" type="text" required/>
+                    <br>
+                    <label for="#email-input">E-mail</label>
+                    <input name="email" type="text" required/>
+                    <br>
+                    <label for="#phone-input">Celular<span class="required">*</span></label>
+                    <input name="phone" type="tel" value="" aria-label="Please enter your phone number" placeholder="ej. (55)-5656-5656" onkeypress="return isNumberKey(event)"   pattern="[0-9]{10}" required/>
+                </div>
+            </section class="form">
+                <br>
+            <section>
+                <div class="datos-pedido">
+                    <legend>Datos del pedido</legend>
+                    <br>
+                    <label for="postre-input">Tipo de postre</label>
+                    <br>
+                    <select name="" id="" aria-placeholder="Selecciona">
+                        <option value="">Selecciona</option>
+                        <option value="">Galletas</option>
+                        <option value="">Brownies</option>
+                        <option value="">Pastel de chocolate</option>
+                        <option value="">Pay de limon</option>
+                        <option value="">Donas</option>
+                        <option value="">Flan</option>
+                        <option value="">Fresas con crema</option>
+                    </select>
+                    <br>
+                    <label for="postre-cantidad">Cantidad</label>
+                    <input name="cantidad" type="number" min="1" max="100" required/>
+                    <br>
+                    <label for="fecha-de-entrega"> Fecha del evento:</label>
+                    <input name="fecha-de-entrega" type="date" min="yyyy-mm-dd">
+                </div>
+            </section>
+                <br>
+            <section class="form">
+                 <div class="datos-envio">
+                    <legend>Datos de envío</legend>
+                    <p>Por favor, selecciona una opción de envío: </p>
+                    <div class="opciones-envio">
+                        <input name="opciones-envio" type="radio" id="opcion-sucursal" checked="true" onclick="hideShowDiv(1)">
+                        <label for="opcion-sucursal"> Recoger en sucursal </label>
+                        <br>
+                        <input name="opciones-envio" type="radio" id="opcion-domicilio" onclick="hideShowDiv(2)">
+                        <label for="opcion-domicilio"> Envío a domicilio </label>
+                        <br>
+                        <input name="opciones-envio" type="radio" id="opcion-punto-medio" onclick="hideShowDiv(3)">
+                        <label for="opcion-punto-medio"> Punto medio de entrega </label>
+                    </div>
+                    <br>
+                    <div class="direccion" id="show-me" style="display: none;">
+                        <label for="#calle-input">Calle</label>
+                        <input name="calle" type="text" required/>
+                        <br>
+                        <label for="#colonia-input">Colonia</label>
+                        <input name="apellidos" type="text" required/>
+                        <br>
+                        <label for="#ciudad-input">Ciudad</label>
+                        <input name="email" type="text" required/>
+                        <br>
+                        <label for="#estado-input">Estado</label>
+                        <input name="email" type="text" required/>
+                        <br>
+                        <label for="#cp-input">Codigo Postal</label>
+                        <input name="email" type="text" required/>
+                        <br>
+                    </div>
+
+                     <div class="dir-recoger" id="calle">
+                        <p>Heriberto Frías 921, Col del Valle Centro, Benito Juárez, 03100 Ciudad de México, CDMX</p>
+                        <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:400px;height:200px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Heriberto+Frías+921,+Col+del+Valle+Centro,+Benito+Juárez,+03100+Ciudad+de+México,+CDMX&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embedded-map-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#google-maps-display img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
+                    </div>
+
+                    <div class="cont-recoger" id="contacto" style="display: none;">
+                        <p>Recibiras un mensaje a tu WhatsApp para coordinar la entrega.</p>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
